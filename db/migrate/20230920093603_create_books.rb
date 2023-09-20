@@ -7,8 +7,7 @@ class CreateBooks < ActiveRecord::Migration[7.0]
       t.decimal :price
       t.boolean :out_of_print
       t.integer :views
-      t.integer :supplier_id
-      t.integer :author_id
+      
 
       t.timestamps
     end
