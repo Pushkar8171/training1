@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_20_111631) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_21_060759) do
   create_table "authors", force: :cascade do |t|
     t.string "f_name"
     t.string "l_name"
@@ -55,6 +55,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_111631) do
     t.decimal "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "customer_id"
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -76,5 +78,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_111631) do
 
   add_foreign_key "books", "authors"
   add_foreign_key "books", "suppliers"
+  add_foreign_key "orders", "customers"
   add_foreign_key "reviews", "customers"
 end
