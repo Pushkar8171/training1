@@ -1,3 +1,9 @@
+<h1>Customer Listing Page</h1>
 
-
-
+<ul>
+  <% @customer.each do |customer| %>
+    <li>
+      <%= customer.title %>
+    </li>
+  <% end %>
+</ul>
