@@ -3,7 +3,12 @@
 <ul>
   <% @customer.each do |customer| %>
     <li>
+      <%= customer.first_name %>
+      <%= customer.lastname %>
       <%= customer.title %>
+      <%= customer.email %>
+      <%= customer.visits %>
+      <%= customer.lock_version %>
     </li>
   <% end %>
 </ul>
