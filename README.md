@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+Using the resources :orders, :customer in the routes for the required routes and testing then on web using url also through console
