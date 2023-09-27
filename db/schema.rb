@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_21_074652) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_26_104406) do
   create_table "authors", force: :cascade do |t|
     t.string "f_name"
     t.string "l_name"
@@ -53,6 +53,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_074652) do
     t.datetime "updated_at", null: false
   end
 
+  
+
   create_table "orders", force: :cascade do |t|
     t.time "date_submitted"
     t.integer "status"
@@ -64,6 +66,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_074652) do
     t.datetime "updated_at", null: false
     t.integer "customer_id"
     t.index ["customer_id"], name: "index_orders_on_customer_id"
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string "name"
+    t.date "admit_date"
+    t.string "status"
+    t.string "assigned_Dr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.date "takenOn"
+    t.date "modifiedOn"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
