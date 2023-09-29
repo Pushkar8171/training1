@@ -1,0 +1,34 @@
+<%= form_with model: @book do |form| %>
+    <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </div>
+    <div>
+      <%= form.label :Publishing_Year %><br>
+      <%= form.text_field :year_published %>
+    </div>
+    <div>
+      <%= form.label :ISBN %><br>
+      <%= form.text_field :isbn%>
+    </div>
+    <div>
+      <%= form.label :Price %><br>
+      <%= form.text_field :price%>
+    </div>
+    <div>
+      <%= form.label :Views %><br>
+      <%= form.text_field :views%>
+    </div>
+  
+    
+    <div>
+      <%= form.label :Available %><br>
+      <%= form.text_area :out_of_print %>
+    </div>
+  
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+ 
+  
