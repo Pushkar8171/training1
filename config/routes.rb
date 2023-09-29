@@ -5,18 +5,19 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  # get "/customer/:id", to: "customer#index" 
-   #get "orders/:id", to: "orders#index" as: "orders"
-   #resources :orders, :customer
-   #get '/orders/:id', to: 'orders#index', as: 'order'
-   #resources :patients, :photos, :orders
+  #get "/customer/:id", to: "customer#index" 
+  #get "orders/:id", to: "orders#index" as: "orders"
+  #resources :orders, :customer
+  #get '/orders/:id', to: 'orders#index', as: 'order'
+  resources :patients, :photos, :orders , :clients,:books
    #get '/patients/:id', to: 'patients#show'
    
-   #get 'foobar(/:id)', to: 'patients#foobar'
-   #get 'patients/:id/userid/:admin_id', to: 'patients#show'
-   resources :books do
-    resources :authors
-  end
+  #get 'foobar(/:id)', to: 'patients#foobar'
+  #get 'patients/:id/userid/:admin_id', to: 'patients#show'
+  #  resources :books do
+   resources :books, :customers
+  # end
+  
 
   
 
