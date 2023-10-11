@@ -1,34 +1,29 @@
 <%= form_with model: @book do |form| %>
-    <div>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
-    </div>
-    <div>
-      <%= form.label :Publishing_Year %><br>
-      <%= form.text_field :year_published %>
-    </div>
-    <div>
-      <%= form.label :ISBN %><br>
-      <%= form.text_field :isbn%>
-    </div>
-    <div>
-      <%= form.label :Price %><br>
-      <%= form.text_field :price%>
-    </div>
-    <div>
-      <%= form.label :Views %><br>
-      <%= form.text_field :views%>
-    </div>
-  
-    
-    <div>
-      <%= form.label :Available %><br>
-      <%= form.text_area :out_of_print %>
-    </div>
-  
-    <div>
-      <%= form.submit %>
-    </div>
-  <% end %>
- 
-  
+  <div style="margin-bottom: 10px;">
+    <%= form.label :title, class: "form-label", style: "font-weight: bold; color: seagreen;" %><br>
+    <%= form.text_field :title, class: "form-control", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" %>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <%= form.label "Publishing Year", class: "form-label", style: "font-weight: bold; color: seagreen;" %><br>
+    <%= form.text_field :year_published, class: "form-control", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" %>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :ISBN, class: "form-label", style: "font-weight: bold; color: seagreen;" %><br>
+    <%= form.text_field :isbn, class: "form-control", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" %>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :Price, class: "form-label", style: "font-weight: bold; color: seagreen;" %><br>
+    <%= form.text_field :price, class: "form-control", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" %>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :Views, class: "form-label", style: "font-weight: bold; color: seagreen;" %><br>
+    <%= form.text_field :views, class: "form-control", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" %>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <%= form.label :Available, class: "form-label", style: "font-weight: bold; color: seagreen;" %><br>
+    <%= form.text_area :out_of_print, class: "form-control", style: "width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" %>
+  </div>
+  <div>
+    <%= form.submit "Submit", class: "btn btn-primary", style: "background-color: seagreen; color: white; border: none; padding: 10px 20px; border-radius: 4px; font-size: 16px; cursor: pointer;" %>
+  </div>
+<% end %>

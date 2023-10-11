@@ -30,7 +30,10 @@ class BooksController < ApplicationController
       @book = Book.find(params[:id])
   
       if @book.update(book_params)
+        flash[:success] = "Book is successfully updated!!"
         redirect_to @book
+        
+
       else
         render "edit"
       end
@@ -41,6 +44,15 @@ class BooksController < ApplicationController
       @book.destroy
       
       redirect_to @book
+    end
+
+    def search
+      # Display all books or perform a search if a query is present
+      if params[:query]
+        @books = Book.where("title LIKE ?", "%#{params[:query]}%")
+      else
+        @books = Book.all
+      end
     end
     
     private
